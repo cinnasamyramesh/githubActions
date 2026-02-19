@@ -1,13 +1,13 @@
-name: test
-on : push
+name: Print Machine Name and Hello World
+
+on: [push]
 
 jobs:
-  name: test
-    runs-on : ubuntu-latest
-
-    steps: 
-    - name: print hello world
-    - run : echo " Hey ramesh"
-
-
+  say-hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print machine name and message
+        run: |
+          echo "Machine name: $(hostname)"
+          echo "Hello, world!"
 
